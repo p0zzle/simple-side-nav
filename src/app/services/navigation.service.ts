@@ -4,17 +4,16 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class NavigationService {
+export class NavigationService implements OnInit {
 
   private showNav$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor() { }
 
   ngOnInit() {
-
   }
 
-  getShowNav() {
+  getShowNav(){
     return this.showNav$.asObservable();
   }
 
@@ -29,5 +28,4 @@ export class NavigationService {
   isNavOpen() {
     return this.showNav$.value;
   }
-
 }
