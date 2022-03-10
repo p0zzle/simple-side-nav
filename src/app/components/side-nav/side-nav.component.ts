@@ -11,6 +11,7 @@ import { SideNavDirection } from './side-nav-direction';
 })
 export class SideNavComponent implements OnInit {
 
+  
   showSideNav: Observable<boolean>;
 
   @Input() sidenavTemplateRef: any;
